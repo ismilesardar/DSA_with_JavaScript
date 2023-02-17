@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array inserting</title>
+</head>
+<body>
+    
+
+    <script>
+        document.write("DSA");
+
+        let sample = [12,334,35,67,78,89,96,37];
+        let position = 2;
+        let value = 50;
+        console.log(sample);
+
+        //if we insert data manually use this on
+        sample[8]=11
+        console.log(sample);
+
+        // sample.splice(2,0,value);
+        // console.log(sample)
+
+        // use for loop
+        for(let i = sample.length-1; i >= 0; i--){
+            if (i>=position) {
+                sample[i+1] = sample[i];
+                i==position ? sample[i] = value : 0;
+            }
+        }
+        console.log(sample);
+
+        // use for loop another way
+        for(let i=sample.length;i>position;i--){
+            sample[i] = sample[i-1];
+        }
+        sample[position] = value
+        console.log(sample)
+
+    </script>
+</body>
+</html>
