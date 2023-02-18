@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Element of array</title>
+  </head>
+  <body>
+    
+    <input type="number" id="index" />
+    <button onclick="handelInput()">Remove</button>
+
+    <script>
+      function handelInput() {
+        let values = document.getElementById("index").value;
+        let index = parseInt(values);
+        let myNum = [12, 43, 56, 76, 87, 63, 90];
+
+        console.log(index);
+        console.log(myNum);
+        for (let i = index-1; i < myNum.length; i++) {
+          myNum[i] = myNum[i + 1];
+        }
+        myNum.length = myNum.length - 1;
+        console.log(myNum);
+      }
+
+      //   let myNum = [12, 43, 56, 76, 87, 63, 90];
+      //   let index = 3;
+      //   console.log(myNum);
+      //   for (let i = index; i < myNum.length; i++) {
+      //     myNum[i] = myNum[i + 1];
+      //   }
+      //   myNum.length = myNum.length - 1;
+      //   console.log(myNum);
+    </script>
+  </body>
+</html>
