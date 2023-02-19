@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Search element</title>
+  </head>
+  <body>
+    <input type="text" placeholder="search value" id="text" />
+    <button onclick="handelClick()">search</button>
+
+    <script>
+      let search = [12, 34, 56, 67, 76, 78, 98, 83];
+      let value = 98;
+      let index = undefined;
+
+      for (let i = 0; i < search.length; i++) {
+        if (search[i] === value) {
+          index = i;
+          break;
+        }
+        // search[i]===value? index = i : undefined;
+      }
+    //   console.log(index, value);
+
+      function handelClick() {
+        let search = [12, 34, 56, 67, 76, 78, 98, 83];
+        let value = parseInt(document.getElementById("text").value);
+        let index = undefined;
+
+        for (let i = 0; i < search.length; i++) {
+          if (search[i] === value) {
+            index = i;
+            break;
+          }
+        }
+        console.log("i = ",index, "v = ",value);
+      }
+    </script>
+  </body>
+</html>
