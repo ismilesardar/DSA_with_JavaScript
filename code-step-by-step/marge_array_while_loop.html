@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>marge array with while loop</title>
+  </head>
+  <body>
+    <h2>Marge array with while loop</h2>
+
+    <script>
+      const data1 = [2, 4, 6, 8, 10, 12, 14, 16];
+      const data2 = [3, 5, 7, 9, 11, 13];
+      let comb = [];
+      let d1 = 0;
+      let d2 = 0;
+      let d3 = 0;
+
+      while (d1 < data1.length && d2 < data2.length) {
+        if (data1[d1] < data2[d2]) {
+          comb[d3] = data1[d1];
+          d1++;
+        } else {
+          comb[d3] = data2[d2];
+          d2++;
+        }
+        d3++;
+      }
+
+      while (d1<data1.length) {
+        comb[d3] = data1[d1];
+        d1++;
+        d3++;
+      }
+      console.log(comb);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Two array manually</title>
+</head>
+<body>
+
+    <script>
+        let data1 = [32,45,67,89,90,23,54]
+        let data2 = [123,234,345,456,567,678,890]
+        let data = []
+
+        for (let i = 0; i < data1.length; i++) {
+            data[i] = data1[i];            
+        }
+        for (let i = 0; i < data2.length; i++) {
+            data[data1.length+i] = data2[i];            
+        }
+        console.log(data);
+    </script>
+</body>
+</html>
