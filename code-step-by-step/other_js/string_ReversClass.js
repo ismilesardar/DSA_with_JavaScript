@@ -2,32 +2,33 @@ class StringR {
   data = [];
   crentSize;
   str;
-constructorons(rStr){
-  this.str = rStr;
-  this.crentSize = this.str.length;
-}
+  constructorons(rStr) {
+    this.str = rStr.split('');
+    this.crentSize = this.str.length;
+    console.log(rStr)
+  }
   push(newVal) {
     this.data[this.crentSize] = newVal;
     this.crentSize++;
   }
-  pop(){
+  pop() {
     this.crentSize--;
     this.data.length = this.crentSize;
   }
 
-  stringRevers(){
-    for(let i=0; i<this.crentSize-1; i++){
+  stringRevers() {
+    for (let i = 0; i < this.crentSize - 1; i++) {
       this.push(this.str[i]);
     }
-    for(let i=0; i<this.crentSize-1; i++){
+    for (let i = 0; i < this.crentSize - 1; i++) {
       this.push(this.str[i]);
     }
   }
 
-  display(){
+  display() {
     console.log(this.data);
   }
-  
+
 }
 
 let demo = new StringR('ismile');
