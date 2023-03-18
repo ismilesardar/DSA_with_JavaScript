@@ -14,7 +14,9 @@ function dequeue(){
   }
 }
 
-
+function display(){
+  console.log(queue);
+}
 
 enqueue(21);
 
