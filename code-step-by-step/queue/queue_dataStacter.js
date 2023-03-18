@@ -8,6 +8,13 @@ function enqueue(newItem){
   crentSize++;
 }
 
+function dequeue(){
+  for(let i=0; i<crentSize ; i++){
+    
+  }
+}
+
+
 
 enqueue(21);
 
