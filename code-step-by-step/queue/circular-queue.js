@@ -22,7 +22,21 @@ class Queue{
     }
   }
 
-  
+  dequeue(){
+    if(this.cruntSize != 0){
+      this.item[this.font]=null;
+      if(this.font == this.max-1){
+        this.font=0;
+      }else{
+        this.font++;
+      }
+      this.cruntSize--;
+    }else{
+      this.rear=-1;
+      this.font=-1;
+      console.log('Queue is empty!');
+    }
+  }
 }
 
 let data = new Queue(5);
