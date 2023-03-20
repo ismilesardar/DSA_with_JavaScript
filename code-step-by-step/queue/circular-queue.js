@@ -7,6 +7,21 @@ class Queue{
     this.rear = -1;
     this.font = -1;
   }
+  enqueue(val){
+    if(this.cruntSize != this.max){
+      if(this.rear == this.max-1){
+        this.rear = 0;
+      }else{        
+        this.rear++;
+      }
+      this.item[this.rear]=val;
+      this.cruntSize++;
+      if(this.font == -1){
+        this.font = this.rear;
+      }
+    }
+  }
+
   
 }
 
