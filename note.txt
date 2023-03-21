@@ -1,0 +1,5 @@
+1. Search in JavaScript?
+=> There are 2 type of search in Algrotum
+      1.Linear Search.
+      2.Binear Search.
+time complextey = O(n) / n^2 / O(big O)
